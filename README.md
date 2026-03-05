@@ -216,7 +216,7 @@ Insider-Threat-Detection
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Insider-Threat-Detection.git
+git clone https://github.com/DeepaprakashRajaram/Insider-Threat-Detection.git
 cd Insider-Threat-Detection
 ```
 
