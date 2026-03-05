@@ -1,5 +1,9 @@
 # Insider Threat Detection Using Behavioral Modeling
 
+Machine Learning based insider threat detection system using behavioral activity modeling and hybrid anomaly detection.
+
+This project combines supervised learning (XGBoost) and unsupervised anomaly detection (Isolation Forest) to identify malicious insider behavior in enterprise activity logs.
+
 ## Overview
 
 This project implements a machine learning–based system for detecting insider threats using behavioral activity logs. Insider threats are security risks that originate from individuals within an organization who misuse their authorized access to compromise data, systems, or networks.
@@ -203,7 +207,73 @@ Insider-Threat-Detection
 * Scikit-learn
 * XGBoost
 * Isolation Forest
-* Data Engineering for large log datasets
+* Large-scale log data engineering
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Insider-Threat-Detection.git
+cd Insider-Threat-Detection
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Pipeline
+
+The full detection pipeline can be executed using the scripts inside the `src` directory.
+
+Extract malicious labels:
+
+```bash
+python src/extract_labels.py
+```
+
+Build user-day labels:
+
+```bash
+python src/build_user_day_labels.py
+```
+
+Generate behavioral features:
+
+```bash
+python src/build_features_r4.py
+```
+
+Train supervised model:
+
+```bash
+python src/train_supervised.py
+```
+
+Train anomaly detection model:
+
+```bash
+python src/train_anomaly.py
+```
+
+Generate risk scores:
+
+```bash
+python src/generate_risk_scores.py
+```
 
 ---
 
